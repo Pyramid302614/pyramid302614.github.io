@@ -4,6 +4,10 @@ async function sleep(ms) {
 
 window.addEventListener("DOMContentLoaded",async () => {
 
+    await sleep(1000);
+
+    document.getElementById("opening_title_header").style.opacity = "1";
+
     await sleep(2000);
 
     document.getElementById("opening_title_body").style.opacity = "1";
@@ -13,6 +17,13 @@ window.addEventListener("DOMContentLoaded",async () => {
     await sleep(3000);
 
     document.getElementById("opening_title_seperator").style.width = "90%";
+    document.getElementById("opening_title_body").style.bottom = "60px";
+    document.getElementById("opening_title_header").style.opacity = "0";
+    document.getElementById("opening_title_header").style.top = "-60px";
+    
+    await sleep(200);
+
+    // document.getElementById("opening_title_body").innerHTML = "Pyramid30";
     
 
 });

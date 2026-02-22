@@ -33,15 +33,17 @@
     font-size: 150px;
 
     pointer-events: none;
+
+    opacity: 0;
     
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
 
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function:  cubic-bezier(.17,.38,.2,.99);
+    transition:
+        top 0.5s cubic-bezier(.17,.38,.2,.99),
+        opacity 0.5s cubic-bezier(.17,.38,.2,.99);
     
 }
 #opening_title_body {
@@ -72,8 +74,10 @@
     height: 2px;
     background-color: black;
 
-    top: 50%;
-    /* transform: translateY(-50%); */
+    position: fixed;
+    top: calc(50% + 50px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 
     transition:
         width 1.5s cubic-bezier(.17,.38,.2,.99);
