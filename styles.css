@@ -35,6 +35,7 @@
     pointer-events: none;
 
     opacity: 0;
+    filter: blur(10px);
     
     position: fixed;
     left: 50%;
@@ -43,8 +44,9 @@
 
     transition:
         top 0.5s cubic-bezier(.17,.38,.2,.99),
-        opacity 0.5s cubic-bezier(.17,.38,.2,.99);
-    
+        opacity 0.5s cubic-bezier(.17,.38,.2,.99),
+        filter 0.5s cubic-bezier(.17,.38,.2,.99);
+
 }
 #opening_title_body {
 
@@ -52,15 +54,17 @@
     font-size: 40px;
 
     opacity: 0;
+    filter: blur(3px);
 
     position: fixed;
-    bottom: 50%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%) translateY(50%);
 
     transition:
         bottom 0.5s cubic-bezier(.17,.38,.2,.99),
-        opacity 0.5s cubic-bezier(.88,.23,.46,1);
+        opacity 0.5s cubic-bezier(.88,.23,.46,1),
+        filter 0.5s cubic-bezier(.88,.23,.46,1);
 
 }
 #opening_title_seperator_div {

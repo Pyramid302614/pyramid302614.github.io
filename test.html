@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  position: fixed;
+  left: 20px;
+  background: lightgreen;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="box" id="box">I move with scroll via JS</div>
+<div style="height:2000px;"></div>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('box').style.top = window.scrollY + 20 + 'px';
+});
+</script>
+
+</body>
+</html>
